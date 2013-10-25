@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Database1ConnectionString-Web.config Connection String" description="Database1ConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=SQL5006.myWindowsHosting.com;Initial Catalog=DB_9ABFAC_Project5;User Id=DB_9ABFAC_Project5_admin;Password=Project5;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\School\\Ontwikkelen\ in\ een\ bedrijfsomgeving\\WebApplication1\\WebApplication1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Database1ConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="Project5ConnectionString-Web.config Connection String" description="Project5ConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=JIM-HP\JIM;Initial Catalog=Project5;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\School\\Ontwikkelen\ in\ een\ bedrijfsomgeving\\WebApplication1\\WebApplication1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Project5ConnectionString']/@connectionString" />
+  </parameter>
+</parameters>
