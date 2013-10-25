@@ -13,11 +13,12 @@
 
 <span style="color:red"><h3>Opgelet! De paswoorden van de vorige zit zijn niet meer geldig, gelieve een nieuw aan te vragen.</h3></span>
 <br />
-<span style="color:red">Verkeerd e-mail adres. Gelieve opnieuw te proberen.</span>
+
+    <form id="form1" runat="server">
+        <asp:Label ID="warningLabel" runat="server"></asp:Label>
 <br />
 <br />
 
-    <form id="form1" runat="server">
     <div>
     
     </div>
@@ -25,12 +26,12 @@
         <asp:TextBox ID="textboxUsername" runat="server" style="margin-left: 46px" Width="223px"></asp:TextBox>
         <p>
             <asp:Label ID="labelPassword" runat="server" Text="Password:"></asp:Label>
-            <asp:TextBox ID="textboxPassword" runat="server" style="margin-left: 45px" Width="219px"></asp:TextBox>
+            <asp:TextBox ID="textboxPassword" TextMode="Password" runat="server" style="margin-left: 45px" Width="219px"></asp:TextBox>
         </p>
         <asp:Button ID="buttonLogin" runat="server" OnClick="buttonLogin_Click" style="margin-left: 108px" Text="Login" Width="71px" />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Project5ConnectionString %>" SelectCommand="SELECT Id, username, password_md5, email, access, first_name, last_name FROM Login"></asp:SqlDataSource>
         <p style="margin-left: 160px">
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="jimsLabel" runat="server"></asp:Label>
         </p>
 
 

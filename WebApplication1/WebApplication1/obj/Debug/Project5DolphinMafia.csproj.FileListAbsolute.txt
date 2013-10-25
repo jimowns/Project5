@@ -1,0 +1,5 @@
+D:\School\Ontwikkelen in een bedrijfsomgeving\GITPROJECT\WebApplication1\WebApplication1\bin\WebApplication1.dll
+D:\School\Ontwikkelen in een bedrijfsomgeving\GITPROJECT\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+D:\School\Ontwikkelen in een bedrijfsomgeving\GITPROJECT\WebApplication1\WebApplication1\obj\Debug\Project5DolphinMafia.csprojResolveAssemblyReference.cache
+D:\School\Ontwikkelen in een bedrijfsomgeving\GITPROJECT\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\School\Ontwikkelen in een bedrijfsomgeving\GITPROJECT\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
