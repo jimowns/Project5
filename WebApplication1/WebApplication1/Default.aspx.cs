@@ -18,7 +18,7 @@ namespace WebApplication1
         protected void buttonLogin_Click(object sender, EventArgs e)
         {
             this.login = new Klasses.Login.Login(this.textboxUsername.Text, this.textboxPassword.Text);
-            this.Label1.Text = login.ControleInvoer();
+            //this.Label1.Text = login.ControleInvoer();
         }
     }
 }
