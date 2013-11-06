@@ -17,6 +17,7 @@ namespace WebApplication1.Klasses.Algemeen
         public const int GROTEBUTTON_Y = 30;
         private const string SLOT_PAGE = "SlotsView.aspx";
         private LambdaSlots lambdaSlots;
+        private LambdaReservations lambdaReservations;
         private Entity entity;
         public int Aantal { set; get; }
 
@@ -54,24 +55,24 @@ namespace WebApplication1.Klasses.Algemeen
                 try
                 {
                     HttpContext.Current.Session.Add(SessionEnum.SessionNames.SlotsID.ToString(), Convert.ToInt32(this.Bord[x].CommandName));
-                    LambdaSlots lambdaSlots = new LambdaSlots(Convert.ToInt32(this.Bord[x].CommandName));
+                    lambdaSlots = new LambdaSlots(Convert.ToInt32(this.Bord[x].CommandName));
                     lambdaSlots.SetSlotsUpdateData();
-                    LambdaReservations lambaReservations = new LambdaReservations();
-                    lambaReservations.SetReservationInsertData();
+                    lambdaReservations = new LambdaReservations();
+                    lambdaReservations.SetReservationInsertData();
                     HttpContext.Current.Response.Redirect(SLOT_PAGE);
                 }
                 catch (Exception e)
-                {
-                    MessageBox.Show("Dit is nog niet 100% klaar" + Environment.NewLine + e.Message);
-                }
+                {                }
             };
         }
 
-        public void ClickReservations(int x)
+        public void ClickReservationsDelete(int x)
         {
             this.Bord[x].Click += delegate(object s, EventArgs e)
             {
-
+                this.lambdaReservations = new LambdaReservations(Convert.ToInt32(this.Bord[x].CommandName));
+                if (lambdaReservations.GetCheckDatabaseRowID())
+                    lambdaReservations.SetDeleteReservationRowById();
             };
         }
     }

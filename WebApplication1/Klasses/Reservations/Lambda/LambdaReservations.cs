@@ -9,6 +9,17 @@ namespace WebApplication1.Klasses.Reservations.linq
 {
     public class LambdaReservations
     {
+        public int Id { set; get; }
+
+        public LambdaReservations()
+        {
+        }
+        public LambdaReservations(int id)
+            :base()
+        {
+            this.Id = id;
+        }
+
         public List<Reservations> GetReservationsByID()
         {
             var list = new Entity();
@@ -31,6 +42,16 @@ namespace WebApplication1.Klasses.Reservations.linq
             list.dataClassContext.SubmitChanges();
 
             return reservation;
+        }
+
+
+        public Boolean GetCheckDatabaseRowID()
+        {
+            return true;
+        }
+        public Reservation SetDeleteReservationRowById()
+        {
+            return null;
         }
     }
 }
